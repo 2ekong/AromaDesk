@@ -1,0 +1,49 @@
+.searchbox-gradient {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background: #2563eb; /* 헤더 로고색 단색 */
+  padding: 2px;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+.searchbox-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: #fff;
+  height: 44px;
+  padding: 0 18px;
+  font-size: 16px;
+  border-radius: 999px 0 0 999px;
+  color: #333;
+}
+.searchbox-input::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+.searchbox-btn {
+  border: none;
+  outline: none;
+  background: none;
+  height: 44px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 999px 999px 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.searchbox-btn:hover {
+  background: #f3f4f6;
+}
+
+@media (max-width: 600px) {
+  .searchbox-gradient {
+    max-width: 100%;
+  }
+} 

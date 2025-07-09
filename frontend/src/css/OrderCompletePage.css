@@ -1,0 +1,384 @@
+/* 주문 완료 페이지 스타일 */
+
+/* ===== 공통 변수 (OrderPaymentPage.css와 동일) ===== */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success-color: #10b981;
+  --danger-color: #ef4444;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+}
+
+/* ===== 페이지 컨테이너 ===== */
+.order-complete-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== 성공 메시지 섹션 ===== */
+.order-complete-success {
+  text-align: center;
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-complete-success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--success-color) 0%, #059669 100%);
+}
+
+.order-complete-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--success-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: successIconBounce 0.6s ease-out 0.2s both;
+}
+
+.order-complete-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+@keyframes successIconBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.order-complete-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.order-complete-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== 주문 정보 카드 ===== */
+.order-complete-info {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.order-complete-info-header {
+  background: var(--bg-light);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order-complete-info-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.order-complete-info-body {
+  padding: 2rem;
+}
+
+/* ===== 주문 정보 행 ===== */
+.order-complete-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order-complete-row:last-child {
+  border-bottom: none;
+}
+
+.order-complete-label {
+  flex: 0 0 180px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.order-complete-value {
+  flex: 1;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.order-complete-value.highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.order-complete-value.success {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.order-complete-value.danger {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+/* ===== 주문 상품 목록 ===== */
+.order-complete-products {
+  margin-top: 1.5rem;
+}
+
+.order-complete-products h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.order-complete-product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-complete-product-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.order-complete-product-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== 배송 정보 ===== */
+.order-complete-delivery {
+  margin-top: 1.5rem;
+}
+
+.order-complete-delivery h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.order-complete-delivery-info {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.order-complete-delivery-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.order-complete-delivery-row:last-child {
+  margin-bottom: 0;
+}
+
+.order-complete-delivery-label {
+  flex: 0 0 100px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.order-complete-delivery-value {
+  flex: 1;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* ===== 액션 버튼 ===== */
+.order-complete-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.order-complete-button {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+}
+
+.order-complete-button-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.order-complete-button-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.order-complete-button-secondary {
+  background: var(--bg-white);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.order-complete-button-secondary:hover {
+  background: var(--bg-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== 로딩 및 에러 상태 ===== */
+.order-complete-loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+.order-complete-error {
+  text-align: center;
+  padding: 2rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--border-radius);
+  color: var(--danger-color);
+  margin: 2rem 0;
+}
+
+.order-complete-error h2 {
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+/* ===== 반응형 디자인 ===== */
+@media (max-width: 768px) {
+  .order-complete-container {
+    padding: 1rem;
+  }
+  
+  .order-complete-success {
+    padding: 2rem 1rem;
+  }
+  
+  .order-complete-info-header,
+  .order-complete-info-body {
+    padding: 1rem;
+  }
+  
+  .order-complete-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .order-complete-label {
+    flex: none;
+    font-size: 0.875rem;
+  }
+  
+  .order-complete-delivery-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .order-complete-delivery-label {
+    flex: none;
+  }
+  
+  .order-complete-actions {
+    flex-direction: column;
+  }
+  
+  .order-complete-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-complete-title {
+    font-size: 1.5rem;
+  }
+  
+  .order-complete-subtitle {
+    font-size: 1rem;
+  }
+  
+  .order-complete-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .order-complete-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+} 
+
+.order-complete-button-danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.order-complete-error-message {
+  color: red;
+  margin-top: 12px;
+}

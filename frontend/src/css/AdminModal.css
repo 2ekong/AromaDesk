@@ -1,0 +1,491 @@
+/* 관리자용 모달 통합 스타일 */
+
+/* ===== 기본 관리자 모달 ===== */
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+.admin-modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: adminModalSlideIn 0.3s ease-out;
+}
+
+@keyframes adminModalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== 성공 알림 모달 ===== */
+.admin-success-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  animation: successModalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-success-modal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes successModalSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.admin-success-modal-icon {
+  width: 80px;
+  height: 80px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-success-modal-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #10b981;
+  animation: checkmarkBounce 0.6s ease-out 0.2s both;
+}
+
+@keyframes checkmarkBounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.admin-success-modal-title {
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-success-modal-message {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-success-modal-button {
+  background: #2563eb;
+  color: #fff;
+  border: 2px solid #2563eb;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-success-modal-button:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== 상품 수정 모달 ===== */
+.admin-product-edit-modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: adminModalSlideIn 0.3s ease-out;
+}
+
+.admin-product-edit-modal-header {
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-product-edit-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.admin-product-edit-modal-body {
+  padding: 20px 24px;
+}
+
+.admin-product-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-product-edit-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-product-edit-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 2px;
+}
+
+.admin-product-edit-form-group input,
+.admin-product-edit-form-group select,
+.admin-product-edit-form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.admin-product-edit-form-group input:focus,
+.admin-product-edit-form-group select:focus,
+.admin-product-edit-form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.admin-product-edit-form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.admin-product-edit-modal-footer {
+  padding: 16px 24px 24px 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.admin-product-edit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.admin-product-edit-button-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.admin-product-edit-button-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.admin-product-edit-button-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.admin-product-edit-button-secondary:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* ===== 에러 상태 스타일 ===== */
+.admin-success-modal.error {
+  background: #fff;
+  border-color: #ef4444;
+}
+
+.admin-success-modal.error .admin-success-modal-icon {
+  background: #fef2f2;
+}
+
+.admin-success-modal.error .admin-success-modal-icon svg {
+  color: #ef4444;
+}
+
+.admin-success-modal.error .admin-success-modal-title {
+  color: #dc2626;
+}
+
+/* ===== 반응형 디자인 ===== */
+@media (max-width: 640px) {
+  .admin-modal,
+  .admin-product-edit-modal {
+    width: 95%;
+    max-width: none;
+    margin: 10px;
+  }
+  
+  .admin-product-edit-modal-header,
+  .admin-product-edit-modal-body,
+  .admin-product-edit-modal-footer {
+    padding: 16px;
+  }
+  
+  .admin-product-edit-modal-footer {
+    flex-direction: column;
+  }
+  
+  .admin-product-edit-button {
+    width: 100%;
+  }
+  
+  .admin-success-modal {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .admin-success-modal-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .admin-success-modal-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .admin-success-modal-title {
+    font-size: 20px;
+  }
+  
+  .admin-success-modal-message {
+    font-size: 14px;
+  }
+  
+  .admin-success-modal-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  
+  .admin-delete-confirm-modal {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .admin-delete-confirm-modal-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .admin-delete-confirm-modal-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .admin-delete-confirm-modal-title {
+    font-size: 20px;
+  }
+  
+  .admin-delete-confirm-modal-message {
+    font-size: 14px;
+  }
+  
+  .admin-delete-confirm-modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .admin-delete-confirm-modal-button {
+    padding: 10px 24px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+}
+
+/* ===== 스크롤바 스타일링 ===== */
+.admin-modal::-webkit-scrollbar,
+.admin-product-edit-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-modal::-webkit-scrollbar-track,
+.admin-product-edit-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.admin-modal::-webkit-scrollbar-thumb,
+.admin-product-edit-modal::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.admin-modal::-webkit-scrollbar-thumb:hover,
+.admin-product-edit-modal::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 
+
+/* ===== 삭제 확인 모달 ===== */
+.admin-delete-confirm-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  animation: successModalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-delete-confirm-modal-icon {
+  width: 80px;
+  height: 80px;
+  background: #fef2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-delete-confirm-modal-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #dc2626;
+  animation: warningBounce 0.6s ease-out 0.2s both;
+}
+
+@keyframes warningBounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.admin-delete-confirm-modal-title {
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-delete-confirm-modal-message {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-delete-confirm-modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-delete-confirm-modal-button {
+  padding: 12px 24px;
+  border: 2px solid;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.admin-delete-confirm-modal-button-cancel {
+  background: #fff;
+  color: #6b7280;
+  border-color: #d1d5db;
+}
+
+.admin-delete-confirm-modal-button-cancel:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-delete-confirm-modal-button-delete {
+  background: #dc2626;
+  color: #fff;
+  border-color: #dc2626;
+}
+
+.admin-delete-confirm-modal-button-delete:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(220, 38, 38, 0.2);
+} 

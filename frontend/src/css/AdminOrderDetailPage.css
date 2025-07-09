@@ -1,0 +1,293 @@
+/* 관리자 주문 상세 페이지 전용 스타일 */
+
+/* 페이지 전체 배경 */
+.admin-page {
+  padding: 32px 24px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.admin-page h1 {
+  margin-bottom: 24px;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.admin-page h2 {
+  margin-bottom: 24px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* 상단 바 */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.back-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 주문 상세 래퍼 */
+.order-detail-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 주문 상세 카드 */
+.order-detail-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 섹션 제목 */
+.order-detail-card h3 {
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* 주문 정보 섹션 */
+.order-info-section {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-item label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* 상태 섹션 */
+.status-section {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-item label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 100px;
+}
+
+.status-badge.ordered {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.cancelled {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-badge.preparing {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.status-badge.shipped {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.delivered {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* 컨트롤 섹션 */
+.control-section {
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.order-detail-control {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-detail-control:last-child {
+  margin-bottom: 0;
+}
+
+.order-detail-control label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 120px;
+  font-size: 14px;
+}
+
+.order-detail-control select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  color: #374151;
+  min-width: 150px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22%236b7280%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+}
+
+.order-detail-control select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.save-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.save-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 로딩 상태 */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+  color: #6b7280;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 16px;
+  }
+  
+  .order-detail-card {
+    padding: 20px;
+    gap: 24px;
+  }
+  
+  .info-grid,
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .order-detail-control {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .order-detail-control label {
+    min-width: auto;
+  }
+  
+  .order-detail-control select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .save-button {
+    width: 100%;
+  }
+}

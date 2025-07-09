@@ -1,0 +1,102 @@
+/* 마이페이지 전체 래퍼 */
+.mypage-wrapper {
+  max-width: 700px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 32px 32px 40px 32px;
+}
+
+.mypage-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.mypage-profile-icon {
+  width: 64px;
+  height: 64px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mypage-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mypage-profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.mypage-profile-email {
+  color: #888;
+  font-size: 0.95rem;
+}
+.mypage-profile-date {
+  color: #bbb;
+  font-size: 0.85rem;
+}
+
+.mypage-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+.mypage-tab-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 12px 24px 10px 24px;
+  cursor: pointer;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.mypage-tab-btn.active {
+  color: #222;
+  border-bottom: 2.5px solid #2563eb;
+  font-weight: bold;
+  background: #f8fafc;
+}
+
+.mypage-content {
+  margin-top: 24px;
+}
+.mypage-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.mypage-info-row label {
+  min-width: 80px;
+  font-weight: 500;
+}
+.mypage-info-row input {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  background: #f9fafb;
+  outline: none;
+}
+.mypage-btn {
+  margin-top: 8px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.mypage-btn:hover {
+  background: #1d4ed8;
+} 

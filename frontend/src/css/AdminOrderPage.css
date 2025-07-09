@@ -1,0 +1,390 @@
+/* 관리자 주문 관리 페이지 전용 스타일 */
+
+.admin-order-page {
+  padding: 32px 24px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.admin-order-page h2 {
+  margin-bottom: 24px;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* 필터 바 스타일 */
+.admin-order-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+  background: #f4f6fa;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.admin-order-filter-bar select,
+.admin-order-filter-bar input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  min-width: 120px;
+}
+
+.admin-order-filter-bar button {
+  padding: 8px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-order-filter-bar button:hover {
+  background: #1e40af;
+}
+
+/* 검색 박스 스타일 */
+.admin-order-search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.admin-order-search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.admin-order-search-btn {
+  padding: 10px 24px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-order-search-btn:hover {
+  background: #1e40af;
+}
+
+/* 테이블 스타일 */
+.admin-order-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.admin-order-table th,
+.admin-order-table td {
+  padding: 14px 10px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-order-table th {
+  background: #f4f6fa;
+  font-weight: bold;
+  color: #374151;
+}
+
+.admin-order-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* 주문 상태 스타일 */
+.admin-order-status {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.admin-order-status.pending {
+  background: #fbbf24;
+  color: #92400e;
+}
+
+.admin-order-status.processing {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.admin-order-status.shipped {
+  background: #10b981;
+  color: #fff;
+}
+
+.admin-order-status.delivered {
+  background: #059669;
+  color: #fff;
+}
+
+.admin-order-status.cancelled {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* 페이지네이션 스타일 */
+.admin-order-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.admin-order-pagination button {
+  padding: 6px 16px;
+  border: 1px solid #2563eb;
+  background: #fff;
+  color: #2563eb;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-order-pagination button:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.admin-order-pagination button:disabled {
+  background: #f3f4f6;
+  color: #bbb;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.admin-order-pagination select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* 로딩 및 빈 상태 스타일 */
+.admin-order-loading,
+.admin-order-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.admin-order-loading {
+  color: #2563eb;
+}
+
+/* 액션 버튼 스타일 */
+.admin-order-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* 상세보기 버튼 스타일 */
+.detail-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 70px;
+}
+
+.detail-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.admin-order-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-order-actions button.view {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.admin-order-actions button.view:hover {
+  background: #2563eb;
+}
+
+.admin-order-actions button.edit {
+  background: #10b981;
+  color: #fff;
+}
+
+.admin-order-actions button.edit:hover {
+  background: #059669;
+}
+
+.admin-order-actions button.delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+.admin-order-actions button.delete:hover {
+  background: #dc2626;
+}
+
+/* 모달 스타일 */
+.admin-order-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 41, 59, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.admin-order-modal {
+  background: #fff;
+  padding: 36px 32px 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: modalFadeIn 0.25s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-order-modal h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.admin-order-modal .form-group {
+  margin-bottom: 15px;
+}
+
+.admin-order-modal .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.admin-order-modal .form-group input,
+.admin-order-modal .form-group select,
+.admin-order-modal .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.admin-order-modal .button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.admin-order-modal .button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.admin-order-modal .button-group button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.admin-order-modal .button-group button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+.admin-order-modal .button-group button[type="button"] {
+  background-color: #6b7280;
+  color: white;
+}
+
+.admin-order-modal .button-group button[type="button"]:hover {
+  background-color: #4b5563;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .admin-order-page {
+    padding: 16px 12px;
+  }
+  
+  .admin-order-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-order-table {
+    font-size: 14px;
+  }
+  
+  .admin-order-table th,
+  .admin-order-table td {
+    padding: 10px 6px;
+  }
+  
+  .admin-order-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.admin-order-desc {
+  color: #6b7280;
+  font-size: 17px;
+  margin-bottom: 18px;
+  margin-top: -10px;
+} 

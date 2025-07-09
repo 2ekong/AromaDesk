@@ -1,0 +1,144 @@
+/* 관리자 상품 페이지 전용 스타일 */
+
+/* 페이지 전체 배경 */
+.admin-page {
+  padding: 32px 24px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.admin-page h1 {
+  margin-bottom: 24px;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* 필터 바 스타일 */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+  background: #f4f6fa;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.filter-bar select,
+.filter-bar input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  min-width: 120px;
+}
+
+.filter-bar button {
+  padding: 8px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-bar button:hover {
+  background: #1e40af;
+}
+
+/* 페이지네이션 스타일 */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.pagination-bar button {
+  padding: 6px 16px;
+  border: 1px solid #2563eb;
+  background: #fff;
+  color: #2563eb;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pagination-bar button:disabled {
+  background: #f3f4f6;
+  color: #bbb;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination-bar select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* 모달 스타일 개선 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 41, 59, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: #fff;
+  padding: 36px 32px 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  max-width: 400px;
+  width: 90%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modalFadeIn 0.25s;
+  text-align: center;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal button {
+  margin-top: 18px;
+  padding: 10px 32px;
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.modal button:hover {
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.13);
+}

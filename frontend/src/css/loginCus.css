@@ -1,0 +1,157 @@
+/* 전체 로그인 페이지 컨테이너 */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* 로고 컨테이너 스타일 */
+.logo-container {
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    width: 350px;
+    padding: 40px 30px 30px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .login-btn {
+    width: 100%;
+    background: #0076ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .login-btn:hover {
+    background: #005fcc;
+  }
+  
+  .google-btn {
+    width: 100%;
+    background: #fff;
+    color: #444;
+    border: 1.5px solid #dadada;
+    border-radius: 5px;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: box-shadow 0.2s, border 0.2s;
+    box-shadow: 0 1px 4px rgba(60,60,60,0.04);
+    text-decoration: none;
+  }
+  .google-btn:hover {
+    border: 1.5px solid #4285f4;
+    box-shadow: 0 2px 8px rgba(66,133,244,0.10);
+  }
+  
+  .kakao-btn {
+    width: 100%;
+    background: #ffe812;
+    color: #3c1e1e;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(60,60,60,0.04);
+    text-decoration: none;
+  }
+  .kakao-btn:hover {
+    background: #ffe812cc;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.10);
+  }
+  
+  .naver-btn {
+    width: 100%;
+    background: #03c75a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 1px 4px rgba(3,199,90,0.04);
+    text-decoration: none;
+  }
+  .naver-btn:hover {
+    background: #02b152;
+    box-shadow: 0 2px 8px rgba(3,199,90,0.10);
+  }
+  
+  .icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+  
+  .signup-link {
+    color: #0076ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    align-self: flex-end;
+    margin-top: 5px;
+  }
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+  
